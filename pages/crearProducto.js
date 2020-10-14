@@ -23,6 +23,7 @@ function crearProducto(){
         console.log( product )
         fetch("http://localhost:5000/product/create",{
             method:"POST",
+            headers: { 'Content-Type': 'application/json' },
             body:JSON.stringify( product )
         }).then( response => {
             console.log( response )
